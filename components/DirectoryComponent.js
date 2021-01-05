@@ -27,7 +27,7 @@ class Directory extends Component {
         />
       );
     };
-
+    // flatlist works like map in previous project but has lazy loading (loads only whats on screen)
     return <FlatList data={this.state.campsites} renderItem={renderDirectoryItem} keyExtractor={(item) => item.id.toString()} />;
   }
 }
