@@ -150,11 +150,16 @@ export const addPartners = (partners) => ({
 export const postFavorite = (campsiteId) => (dispatch) => {
   setTimeout(() => {
     dispatch(addFavorite(campsiteId));
-  }, 2000);
+  }, 500);
 };
 
 export const addFavorite = (campsiteId) => ({
   type: ActionTypes.ADD_FAVORITE,
+  payload: campsiteId,
+});
+
+export const deleteFavorite = (campsiteId) => ({
+  type: ActionTypes.DELETE_FAVORITE,
   payload: campsiteId,
 });
 

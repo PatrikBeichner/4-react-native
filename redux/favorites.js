@@ -9,6 +9,10 @@ export const favorites = (state = [], action) => {
       }
       // if favorite is not saved, concat favorite to array
       return state.concat(action.payload);
+
+    case ActionTypes.DELETE_FAVORITE:
+      return state.filter((favorite) => favorite !== action.payload);
+
     default:
       return state;
   }
